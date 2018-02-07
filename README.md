@@ -4,6 +4,10 @@
 
 We have created this short spec to help you create awesome and consistent todo app. Make sure to not only read it but to understand it as well.
 
+## Submit your test
+
+Create a fork of this branch, or create a new repo called `test-react-todomvc`, please feel free to follow a good [git-flow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) and when you think you are ready to submit it please send an email to [david@geniusplaza.com](david@geniusplaza.com) with the url of your repository.
+
 ## Structure
 
 ### Directory Structure
