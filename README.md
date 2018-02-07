@@ -4,10 +4,6 @@
 
 We have created this short spec to help you create awesome and consistent todo app. Make sure to not only read it but to understand it as well.
 
-## Submit your test
-
-Create a fork of this branch, or create a new repo called `test-react-todomvc`, please feel free to follow a good [git-flow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) and when you think you are ready to submit it please send an email to [david@geniusplaza.com](david@geniusplaza.com) with the url of your repository.
-
 ## Structure
 
 ### Directory Structure
@@ -125,6 +121,21 @@ Your app should dynamically persist the todos to localStorage. If the framework 
 
 Routing is required for all implementations. If supported by the framework, use its built-in capabilities. The following routes should be implemented: `#/` (all - default), `#/active` and `#/completed` (`#!/` is also allowed). When the route changes, the todo list should be filtered on a model level and the `selected` class on the filter links should be toggled. When an item is updated while in a filtered state, it should be updated accordingly. E.g. if the filter is `Active` and the item is checked, it should be hidden. Make sure the active filter is persisted on reload.
 
-### Mockup
+---
+
+## Submit your test
+
+Create a fork of this branch, or create a new repo called `test-react-todomvc`, please feel free to follow a good [git-flow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) and when you think you are ready to submit it please send an email to [david@geniusplaza.com](david@geniusplaza.com) with the url of your repository.
+
+<!-- ### Mockup
+
+It is a recommended practice to have a rough visual representation of what you are about to build.
 
 ![Mockup V1](images/mockup-v1.png)
+
+From the above diagram, we can fish out our presentation components:
+
+* TodoForm : purple
+* Title: green
+* TodoList: red
+* Todo: grey -->
