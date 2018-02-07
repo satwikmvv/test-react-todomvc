@@ -63,7 +63,7 @@ You should `.gitignore` everything in `node_modules` except the files actually u
 
 ### Mockup
 
-![Mockup V1](images/mockup-v1.jpg)
+![Mockup V1](images/mockup-v1.png)
 
 ### Code
 
