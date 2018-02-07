@@ -98,7 +98,7 @@ This checkbox toggles all the todos to the same state as itself. Make sure to cl
 
 ### Item
 
-A todo item has three possible interactions:
+A todo item has these possible interactions:
 
 * Clicking the checkbox marks the todo as complete by updating its `completed` value and toggling the class `completed` on its parent `<li>`
 
