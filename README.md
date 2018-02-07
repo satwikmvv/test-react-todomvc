@@ -18,12 +18,13 @@ Recommended file structure:
 index.html
 package.json
 node_modules/
-css
-└── app.css
-js/
-├── app.js
-├── controllers/
-└── models/
+src/
+  - components/
+  - containers/
+  - styles/
+    └──app.scss
+  - utils/
+  app.js  
 readme.md
 ```
 
@@ -34,19 +35,24 @@ Components should be split up into separate files and placed into folders where 
 Example:
 
 ```
-js/
-├── app.js
-├── controllers/
-│   └── todos.js
-└── models/
-    └── todo.js
+src/
+  - components/
+  - containers/
+  - styles/
+    └──app.scss
+  - utils/
+  app.js  
 ```
 
 Keep in mind that the framework’s best practices on how to structure your app come first.
 
+References:
+
+* https://medium.com/@alexmngn/how-to-better-organize-your-react-applications-2fd3ea1920f1
+
 ### README
 
-All examples must include a README describing the framework (react), the general implementation, and the build process if required. There is an example [readme](readme.example.md) in this project.
+All examples must include a README describing the framework (react), the general implementation, and the build process if required. There is an example [readme](README.example.md) in this project.
 
 ### Dependency Management
 
@@ -64,10 +70,6 @@ Unless it conflicts with the project's best practices, your example should use [
 ```
 
 You should `.gitignore` everything in `node_modules` except the files actually used by your example. That means that documentation, READMEs and tests should not be included in the pull request.
-
-### Mockup
-
-![Mockup V1](images/mockup-v1.png)
 
 ### Code
 
@@ -122,3 +124,7 @@ Your app should dynamically persist the todos to localStorage. If the framework 
 ### Routing
 
 Routing is required for all implementations. If supported by the framework, use its built-in capabilities. The following routes should be implemented: `#/` (all - default), `#/active` and `#/completed` (`#!/` is also allowed). When the route changes, the todo list should be filtered on a model level and the `selected` class on the filter links should be toggled. When an item is updated while in a filtered state, it should be updated accordingly. E.g. if the filter is `Active` and the item is checked, it should be hidden. Make sure the active filter is persisted on reload.
+
+### Mockup
+
+![Mockup V1](images/mockup-v1.png)
