@@ -1,4 +1,4 @@
-# Framework Name • [TodoMVC](http://todomvc.com)
+# TodoMVC (REACT)
 
 > Official description of the framework (from its website)
 
@@ -22,7 +22,7 @@
 - [Twitter](http://twitter.com/__)
 - [Google+]()
 
-*Let us [know](https://github.com/tastejs/todomvc/issues) if you discover anything worth sharing.*
+*Let us [know]() if you discover anything worth sharing.*
 
 
 ## Implementation
@@ -32,4 +32,4 @@ How was the app created? Anything worth sharing about the process of creating th
 
 ## Credit
 
-Created by [Your Name](http://your-website.com)
+Created by [Your Name](user@noreplay.com)
