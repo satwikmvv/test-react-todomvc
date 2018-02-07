@@ -2,7 +2,7 @@
 
 ## Application Specification
 
-We have created this short spec to help you create awesome and consistent todo app. Make sure to not only read it but to understand it as well.
+We have created this short spec to help you create an awesome and consistent todo app. Make sure to not only read it but to understand it as well.
 
 ## Structure
 
@@ -29,6 +29,8 @@ readme.md
 Try to follow this structure as close as possible while still keeping React best practices.
 
 Components should be split up into separate files and placed into folders where it makes the most sense.
+
+A Container does data fetching and then renders its corresponding components.
 
 Example:
 
