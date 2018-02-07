@@ -1,5 +1,11 @@
 # Genius Plaza Todo App Test (React)
 
+## Submit your test
+
+Create a fork of this branch, or create a new repo called `test-react-todomvc`, please feel free to follow a good [git-flow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) and when you think you are ready to submit it please send an email to [david@geniusplaza.com](david@geniusplaza.com) with the url of your repository.
+
+---
+
 ## Application Specification
 
 We have created this short spec to help you create awesome and consistent todo app. Make sure to not only read it but to understand it as well.
@@ -11,6 +17,7 @@ We have created this short spec to help you create awesome and consistent todo a
 Recommended file structure:
 
 ```
+.gitignore
 index.html
 package.json
 node_modules/
@@ -18,13 +25,14 @@ src/
   - components/
   - containers/
   - styles/
+    └──base.scss
     └──app.scss
   - utils/
   app.js  
 readme.md
 ```
 
-Try to follow this structure as close as possible while still keeping to the framework’s best practices.
+Try to follow this structure as close as possible while still keeping React best practices.
 
 Components should be split up into separate files and placed into folders where it makes the most sense.
 
@@ -35,41 +43,42 @@ src/
   - components/
   - containers/
   - styles/
+    └──base.scss
     └──app.scss
   - utils/
   app.js  
 ```
 
-Keep in mind that the framework’s best practices on how to structure your app come first.
-
-References:
-
-* https://medium.com/@alexmngn/how-to-better-organize-your-react-applications-2fd3ea1920f1
-
 ### README
 
-All examples must include a README describing the framework (react), the general implementation, and the build process if required. There is an example [readme](README.example.md) in this project.
+Your code must include a README describing the general implementation, and the build process if required. There is an example [readme](README.example.md) in this project.
 
 ### Dependency Management
 
-Unless it conflicts with the project's best practices, your example should use [npm](https://npmjs.com) or [yarn](https://yarnpkg.com/) for package management. Specify your dependencies in a `package.json` file in the root directory of your app. The file must include `todomvc-common` and `todomvc-app-css` as dependencies. An example `package.json` could look like this:
+Unless it conflicts with the project's best practices, your example should use [npm](https://npmjs.com) or [yarn](https://yarnpkg.com/) for package management. Specify your dependencies in a `package.json` file in the root directory of your app. An example `package.json` could look like this:
 
 ```json
 {
   "private": true,
   "dependencies": {
     "backbone": "^1.1.2",
-    "todomvc-app-css": "^1.0.0",
-    "todomvc-common": "^1.0.1"
   }
 }
 ```
 
 You should `.gitignore` everything in `node_modules` except the files actually used by your example. That means that documentation, READMEs and tests should not be included in the pull request.
 
+### Mockup
+
+It is a recommended practice to have a rough visual representation of what you are about to build.
+
+![Mockup V1](images/mockup-v1.png)
+
+From the above diagram, try to create your own presentation components, there's no wrong answers, be creative.
+
 ### Code
 
-Please try to keep the HTML as close to the template as possible. Remove the comments from the HTML when you are finished. The `base.css` file should be referenced from the assets folder and should not be touched. If you need to change some styles, use the `app.css` file, but try to keep changes to a minimum. Remember to update the relative paths when using the template.
+Please try to keep the HTML as close to the template as possible. The `base.css` file should be referenced from the assets folder and should not be touched. If you need to change some styles, use the `app.css` file, but try to keep changes to a minimum. Remember to update the relative paths when using the template.
 
 Make sure to follow these:
 
@@ -81,7 +90,7 @@ Make sure to follow these:
 
 ### No todos
 
-When there are no todos, `#main` and `#footer` should be hidden.
+When there are no todos, the todos list section should be hidden.
 
 ### New todo
 
@@ -115,27 +124,8 @@ Removes completed todos when clicked. Should be hidden when there are no complet
 
 ### Persistence
 
-Your app should dynamically persist the todos to localStorage. If the framework has capabilities for persisting data (e.g. Backbone.sync), use that. Otherwise, use vanilla localStorage. If possible, use the keys `id`, `title`, `completed` for each item. Make sure to use this format for the localStorage name: `todos-[framework]`. Editing mode should not be persisted.
+Your app should dynamically persist the todos to localStorage. Implement a way to add the capability of persisting data into your app. Otherwise, use vanilla localStorage. If possible, use the keys `id`, `title`, `completed` for each item. Make sure to use this format for the localStorage name: `todos-`. Editing mode should not be persisted.
 
 ### Routing
 
-Routing is required for all implementations. If supported by the framework, use its built-in capabilities. The following routes should be implemented: `#/` (all - default), `#/active` and `#/completed` (`#!/` is also allowed). When the route changes, the todo list should be filtered on a model level and the `selected` class on the filter links should be toggled. When an item is updated while in a filtered state, it should be updated accordingly. E.g. if the filter is `Active` and the item is checked, it should be hidden. Make sure the active filter is persisted on reload.
-
----
-
-## Submit your test
-
-Create a fork of this branch, or create a new repo called `test-react-todomvc`, please feel free to follow a good [git-flow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) and when you think you are ready to submit it please send an email to [david@geniusplaza.com](david@geniusplaza.com) with the url of your repository.
-
-<!-- ### Mockup
-
-It is a recommended practice to have a rough visual representation of what you are about to build.
-
-![Mockup V1](images/mockup-v1.png)
-
-From the above diagram, we can fish out our presentation components:
-
-* TodoForm : purple
-* Title: green
-* TodoList: red
-* Todo: grey -->
+Routing is required for all implementations. The following routes should be implemented: `#/` (all - default), `#/active` and `#/completed` (`#!/` is also allowed). When the route changes, the todo list should be filtered on a model level and the `selected` class on the filter links should be toggled. When an item is updated while in a filtered state, it should be updated accordingly. E.g. if the filter is `Active` and the item is checked, it should be hidden. Make sure the active filter is persisted on reload.
