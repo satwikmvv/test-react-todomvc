@@ -61,6 +61,10 @@ Unless it conflicts with the project's best practices, your example should use [
 
 You should `.gitignore` everything in `node_modules` except the files actually used by your example. That means that documentation, READMEs and tests should not be included in the pull request.
 
+### Mockup
+
+![Mockup V1](images/mockup-v1.jpg)
+
 ### Code
 
 Please try to keep the HTML as close to the template as possible. Remove the comments from the HTML when you are finished. The `base.css` file should be referenced from the assets folder and should not be touched. If you need to change some styles, use the `app.css` file, but try to keep changes to a minimum. Remember to update the relative paths when using the template.
