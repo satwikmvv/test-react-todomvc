@@ -26,22 +26,29 @@ handleInput(e) {
 
 handleSubmit(e) {
     e.preventDefault();
-    (this.state.searchInput.trim())?
+    (this.state.searchInput.trim())? //checking if the searchinput is empty and trimming the inputted string
     this.setState((prevState)=>{
         return{
             items: [...prevState.items,{itemname: prevState.searchInput.trim(),complete: false,key: Date.now()}],
             searchInput:''
         }
     })
-    : alert('type input')
+    : alert('Please input text')
 }
 
-onRemove(){
-
+onRemove(e,item){
+console.log(e);
 }
 
 onToggle(item) {
-  console.log(this.state.items.indexOf(item))
+  var referenceid=this.state.items.indexOf(item);
+  var itemChange={...item};
+  itemChange.complete=!itemChange.complete;
+  this.setState((prevState)=>{
+    return {
+      items: prevState.items.slice(0,referenceid).concat(itemChange,prevState.items.slice(referenceid+1,prevState.items.length))
+    }
+  })
 }
 
   render() {
@@ -50,7 +57,7 @@ onToggle(item) {
         <header className="App-header">
           <h1 className="App-title">TODO APP</h1>
         </header>
-        <div>
+        <div className="App-container">
           <SearchBar handleSubmit={this.handleSubmit} handleInput={this.handleInput} searchInput={this.state.searchInput}/>
           {(this.state.items.length===1)?
             (<p><strong>{this.state.items.length}</strong> item</p>)

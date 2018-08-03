@@ -1,15 +1,128 @@
 .App {
-
+  text-align:center;
 }
 
 .App-header {
-  background-color: rgb(92, 39, 39);
+  background-color: rgb(0, 0, 0);
   height: 70px;
   padding: 20px;
   color: white;
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 40px;
+  margin: 10px;
 }
 
+.App-container {
+  
+  height:100%;
+}
+
+.destroy {
+  text-decoration: none;
+  font-size: 17px;
+  color: red;
+  font-weight: bold;
+  float:right;
+  display:none;
+}
+
+.itemcontent {
+  word-break: break-all;
+  white-space: normal;
+}
+
+li:hover>.destroy {
+  display: inline-block;
+  margin: auto;
+}
+
+ul {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.itemcontent {
+  margin-left:30px;
+  display: inline-block;
+}
+
+li {
+  width:50%;
+  text-align:left;
+  padding:15px;
+  list-style-type: none;
+  background-color: #813772;
+  color: #fff;
+  margin-bottom: 30px;
+  box-shadow: 0 3px 4px 0 rgba(0,0,0,.14), 0 3px 3px -2px rgba(0,0,0,.12), 0 1px 8px 0 rgba(0,0,0,.2);
+}
+
+form {
+  padding-top: 5vh;
+}
+
+.searchbar {
+  width: 50%;
+  max-width: 400px;
+  padding: 8px;
+  font-size: 17px;
+}
+
+.submitbutton {
+  text-decoration: none;
+  background-color: #0404049c;
+  padding: 12px;
+  color: white;
+  border-radius: 0px 15px 15px 0px;
+  font-size: 14px;
+}
+
+
+label {
+  display: inline-block;
+  position: relative;
+  padding: 15px 23px 15px 24px;
+  border: 3px solid #fff;
+  border-radius: 100px;
+  color: rgb(255, 0, 0);
+  background-color: #6a8494;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color .2s, box-shadow .2s;
+}
+
+label::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  width: 32px;
+  border: 3px solid #fff;
+  border-radius: 100px;
+  transition: background-color .2s;
+}
+
+label:hover, input:focus + label {
+  box-shadow: 0 0 20px rgba(0, 0, 0, .6);
+}
+
+input:checked + label {
+  background-color: #ab576c;
+}
+
+input:checked + label::before {
+  background-color: #fff;
+}
+
+.toggletask {
+  display: none;
+}

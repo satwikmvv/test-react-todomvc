@@ -2,4 +2,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-image: linear-gradient(to right top, #062f4f, #3c3068, #7a1f65, #a90044, #b82601);
+  min-height: 100vh;
 }
