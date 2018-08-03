@@ -36,14 +36,19 @@ handleSubmit(e) {
     : alert('Please input text')
 }
 
-onRemove(e,item){
-console.log(e);
+onRemove(item){
+  let referenceid=this.state.items.indexOf(item);
+  this.setState((prevState)=>{
+    return {
+      items: prevState.items.slice(0,referenceid).concat(prevState.items.slice(referenceid+1,prevState.items.length))
+    }
+  })
 }
 
 onToggle(item) {
   var referenceid=this.state.items.indexOf(item);
   var itemChange={...item};
-  itemChange.complete=!itemChange.complete;
+  itemChange.complete=!itemChange.complete; //updating the completed key in the new items array without mutating
   this.setState((prevState)=>{
     return {
       items: prevState.items.slice(0,referenceid).concat(itemChange,prevState.items.slice(referenceid+1,prevState.items.length))
@@ -60,9 +65,9 @@ onToggle(item) {
         <div className="App-container">
           <SearchBar handleSubmit={this.handleSubmit} handleInput={this.handleInput} searchInput={this.state.searchInput}/>
           {(this.state.items.length===1)?
-            (<p><strong>{this.state.items.length}</strong> item</p>)
+            (<p className="itemnumber"><strong>{this.state.items.length}</strong> item</p>)
           : 
-            (<p><strong>{this.state.items.length}</strong> items</p>)
+            (<p className="itemnumber"><strong>{this.state.items.length}</strong> items</p>)
           }
           <div className="displaycontainer">
             {(this.state.items.length!==0)?
