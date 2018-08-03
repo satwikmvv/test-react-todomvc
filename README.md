@@ -1,20 +1,31 @@
 # TodoMVC (REACT)
 
-> Official description of the framework (from its website)
+> A simple Todo List app with the functionality to add tasks, check the completed tasks and remove the tasks.
 
-## Resources
+## Deployed version of the App
 
-- [Website]()
-- [Documentation]()
+- [Website](https://todoreactmvc.netlify.com/)
 
-### Articles
+### reference
 
-- [Interesting article]()
+- [React Docs](https://reactjs.org/docs/getting-started.html)
+
+## Usage
+
+>git clone or fork repo
+
+>npm install
+
+>npm start / yarn start 
 
 ## Implementation
 
-How was the app created? Anything worth sharing about the process of creating the app? Any spec violations?
+Used ReactJS to update the Virtual DOM. Items are stored in the main app component state and are added through the SearchBar child component displayed using another child component called DisplayItems.
+
+The manipulation of list items are done using setState and updated using array slice methods to not mutate the state.
+
+Used conditional styling inside JSX for some of the components.
 
 ## Credit
 
-Created by [Satwik Mandapati](satwikmvv@gmail.com)
+Created by [Satwik Mandapati](www.wikmeister.com)
