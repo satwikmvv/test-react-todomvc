@@ -28,4 +28,4 @@ Used conditional styling inside JSX for some of the components.
 
 ## Credit
 
-Created by [Satwik Mandapati](www.wikmeister.com)
+Created by [Satwik Mandapati](http://www.wikmeister.com)
