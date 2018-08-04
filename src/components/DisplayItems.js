@@ -12,17 +12,17 @@ class DisplayItem extends Component {
                             <input
                             className="toggletask"
                             type="checkbox"
-                            onClick={()=>this.props.onToggle(item)}
+                            onChange={()=>this.props.onToggle(item)}
                             checked={item.complete}
                             id={item.key}
                             />
-                            <label for={item.key} className="toggle">{item.complete? '\u2717':'\u2713'}</label>
+                            <label htmlFor={item.key} className="toggle">{item.complete? '\u2717':'\u2713'}</label>
                             <p className="itemcontent" style={{
                                 textDecoration:item.complete?'line-through' : 'none'
                             }}>
                                 {item.itemname}
                             </p>
-                            <a href="javascript:void(0)" className="destroy" onClick={()=>this.props.onRemove(item)}>X</a>
+                            <a href="javascript:void(0)" className="destroy" onClick={()=>this.props.onRemove(item)}>{'\u2717'}</a>
                         </li>
                         )
                     }

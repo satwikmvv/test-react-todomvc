@@ -56,6 +56,17 @@ onToggle(item) {
   })
 }
 
+componentWillUpdate(nextProps,NextState) {
+  localStorage.setItem('items',JSON.stringify(NextState.items))
+}
+
+componentWillMount() {
+  (localStorage.getItem('items')) &&
+  this.setState({
+    items:JSON.parse(localStorage.getItem('items'))
+  })
+}
+
   render() {
     return (
       <div className="App">
