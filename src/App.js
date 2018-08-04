@@ -75,16 +75,16 @@ componentWillMount() {
         </header>
         <div className="App-container">
           <SearchBar handleSubmit={this.handleSubmit} handleInput={this.handleInput} searchInput={this.state.searchInput}/>
-          {(this.state.items.length===1)?
-            (<p className="itemnumber"><strong>{this.state.items.length}</strong> item</p>)
-          : 
-            (<p className="itemnumber"><strong>{this.state.items.length}</strong> items</p>)
-          }
+          <div className="itemCounter">
+            <span className="itemnumber"><strong>{this.state.items.length}</strong> item{this.state.items.length===1 ?'' :'s' }</span>
+            <a href="javascript:void(0)" className="clearAll" onClick={()=>{localStorage.removeItem('items');this.setState({items:[]})}}>Clear List</a>
+          </div>
+          
           <div className="displaycontainer">
             {(this.state.items.length!==0)?
               (<DisplayItems items={this.state.items} onRemove={this.onRemove} onToggle={this.onToggle}/>)
             :
-              <div>No Items</div>
+              <h1>Chop! Chop! Got Stuff ToDo!</h1>
             }
           </div>
         </div>      
